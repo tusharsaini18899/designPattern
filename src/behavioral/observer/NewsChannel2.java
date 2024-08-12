@@ -6,7 +6,7 @@ public class NewsChannel2 implements Channel {
     @Override
     public void update(Object o) {
         this.news = (String) o;
-        System.out.println("News '" + this.news + "' sent to  CHANNEL 1");
+        System.out.println("News '" + this.news + "' sent to  CHANNEL 2");
     }
 
     public String getNews() {

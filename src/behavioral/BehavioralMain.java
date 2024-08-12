@@ -30,9 +30,13 @@ public class BehavioralMain {
         // lets you define a subscription mechanism to notify multiple objects about any events that happen to the object they’re observing.
         System.out.println("********************  Observer Start  *************************");
         NewsAgency newsAgency=new NewsAgency();
-        newsAgency.addObserver(new NewsChannel1());
-        newsAgency.addObserver(new NewsChannel2());
-        newsAgency.setNews("Hello! this is new news");
+        NewsChannel1 newsChannel1=new NewsChannel1();
+        NewsChannel2 newsChannel2=new NewsChannel2();
+        newsAgency.addObserver(newsChannel1);
+        newsAgency.addObserver(newsChannel2);
+        newsAgency.setNews("Hello! this is new news 1");
+        newsAgency.removeObserver(newsChannel1);
+        newsAgency.setNews("Hello! this is new news 2");
 
     }
 }
